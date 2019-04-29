@@ -12,5 +12,6 @@ Just execute
 	bash build.sh
 
 and you'll find the libfasttext.so dynamic library, and you can run the test this way
+	
 	java -cp "jna-5.3.0.jar:." FastTextJNAWrapper
 
