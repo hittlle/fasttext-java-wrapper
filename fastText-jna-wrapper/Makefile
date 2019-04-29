@@ -54,8 +54,8 @@ interface.o: src/interface.cc src/*.h
 	$(CXX) $(CXXFLAGS) -c src/interface.cc
 
 fasttext: $(OBJS) src/interface.cc
-	$(CXX) $(CXXFLAGS) $(OBJS) src/interface.cc -o fasttext
-	#$(CXX) $(CXXFLAGS) $(OBJS) src/main.cc -o fasttext
+	#$(CXX) $(CXXFLAGS) $(OBJS) src/interface.cc -o fasttext
+	$(CXX) -DFAST_BIN $(CXXFLAGS) $(OBJS) src/main.cc -o fasttext
 
 clean:
 	rm -rf *.o *.gcno *.gcda fasttext
